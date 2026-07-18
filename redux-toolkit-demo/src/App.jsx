@@ -5,7 +5,7 @@ import heroImg from './assets/hero.png'
 import './App.css'
 
 import { useDispatch, useSelector } from 'react-redux';
-import { increment, decrement, reset } from './features/counterSlice';
+import { increment, decrement, reset, incrementByAmount, multiply } from './features/counterSlice';
 
 
 function App() {
@@ -21,7 +21,12 @@ function App() {
         <button onClick={() => dispatch(increment())}>Increment</button>
         <button onClick={() => dispatch(decrement())}>Decrement</button>
         <button onClick={() => dispatch(reset())}>Reset</button>
-
+        <button onClick={() => dispatch(incrementByAmount(5))}>+ 5</button>
+        <button onClick={() => dispatch(incrementByAmount(10))}>+ 10</button>
+        <button onClick={() => dispatch(multiply(2))}> * 2</button>
+        <button onClick={() => dispatch(multiply(5))}> * 5</button>
+        <button onClick={() => dispatch(multiply(2))}> / 2</button>
+        
       </div>
     </>
   )
