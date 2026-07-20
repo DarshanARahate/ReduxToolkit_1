@@ -6,6 +6,9 @@ import { increment, decrement, reset, incrementByAmount, multiply, divide } from
 import { addTodo, removeTodo } from './features/todoSlice';
 
 import { fetchUsers } from './features/userSlice';
+import AddPost from './components/AddPost';
+import Users from "./components/Users";
+import Posts from "./components/Posts";
 
 
 function App() {
@@ -35,6 +38,15 @@ function App() {
   return (
     <>
       <div>
+
+        {/* <AddPost />
+        <hr />
+        <Users />
+        <hr /> */}
+        <Posts />
+        <hr />
+        <hr />
+
         <h1>Counter</h1>
         <h2>Count : {count} </h2>
         <button onClick={() => dispatch(increment())}>Increment</button>
